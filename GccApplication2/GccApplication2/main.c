@@ -11,6 +11,8 @@ int main(void)
 	DIO_voidSetPinDir(DIO_U8_PORTD, DIO_U8_PIN4, DIO_U8_OUTPUT);
 	DIO_voidSetPinDir(DIO_U8_PORTD, DIO_U8_PIN5, DIO_U8_OUTPUT);
 	DIO_voidSetPinDir(DIO_U8_PORTD, DIO_U8_PIN7, DIO_U8_OUTPUT);
+	DIO_voidSetPinDir(DIO_U8_PORTD, DIO_U8_PIN0, DIO_U8_INPUT);
+	DIO_voidSetPinDir(DIO_U8_PORTD, DIO_U8_PIN1, DIO_U8_OUTPUT);
     PWM_vidInit();
 	USART_Init(9600);
     while (1) 
