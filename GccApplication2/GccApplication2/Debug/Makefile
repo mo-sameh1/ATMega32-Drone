@@ -42,7 +42,7 @@ C_SRCS +=  \
 ../GIE_prog.c \
 ../main.c \
 ../PWM_prog.c \
-../USART_PROG.c
+../uart.c
 
 
 PREPROCESSING_SRCS += 
@@ -57,7 +57,7 @@ EXTI_prog.o \
 GIE_prog.o \
 main.o \
 PWM_prog.o \
-USART_PROG.o
+uart.o
 
 OBJS_AS_ARGS +=  \
 DIO_prog.o \
@@ -65,7 +65,7 @@ EXTI_prog.o \
 GIE_prog.o \
 main.o \
 PWM_prog.o \
-USART_PROG.o
+uart.o
 
 C_DEPS +=  \
 DIO_prog.d \
@@ -73,7 +73,7 @@ EXTI_prog.d \
 GIE_prog.d \
 main.d \
 PWM_prog.d \
-USART_PROG.d
+uart.d
 
 C_DEPS_AS_ARGS +=  \
 DIO_prog.d \
@@ -81,7 +81,7 @@ EXTI_prog.d \
 GIE_prog.d \
 main.d \
 PWM_prog.d \
-USART_PROG.d
+uart.d
 
 OUTPUT_FILE_PATH +=GccApplication2.elf
 
@@ -132,7 +132,7 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-./USART_PROG.o: .././USART_PROG.c
+./uart.o: .././uart.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmel\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "D:\Atmel\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

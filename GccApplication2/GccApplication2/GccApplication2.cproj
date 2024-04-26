@@ -174,10 +174,10 @@
     <Compile Include="STD_types.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="USART_INI.h">
+    <Compile Include="uart.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="USART_PROG.c">
+    <Compile Include="uart.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
