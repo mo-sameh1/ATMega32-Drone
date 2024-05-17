@@ -55,34 +55,30 @@ void PWM_vidSetDutyNFreqCH0(f32 Copy_u8DutyCycle)
 {
 	TCNT0=0;
 	f32 dutycycle=(Copy_u8DutyCycle/100)*256;
-	s8 bta3=(s8)dutycycle;
-	OCR0=256-bta3;
+	s8 cycle=(s8)dutycycle;
+	OCR0=256-cycle;
 		
 }
 
 
 void PWM_vidSetDutyNFreqCH1A(f32 Copy_u8DutyCycle)
 {
-	
 	f32 dutycycle=(Copy_u8DutyCycle/100)*256;
-	s16 bta3=(s16)dutycycle;
-	OCR1A=(256-bta3);
-	
+	s16 cycle=(s16)dutycycle;
+	OCR1A=(256-cycle);
 }
 void PWM_vidSetDutyNFreqCH1B(f32 Copy_u8DutyCycle)
 {
-	
 	f32 dutycycle=(Copy_u8DutyCycle/100)*256;
-	s16 bta3=(s16)dutycycle;
-	OCR1B=(256-bta3);
-	
+	s16 cycle=(s16)dutycycle;
+	OCR1B=(256-cycle);
 }
 
 void PWM_vidSetDutyNFreqCH2(f32 Copy_u8DutyCycle){
 	TCNT2=0;
 	f32 dutycycle=(Copy_u8DutyCycle/100)*256;
-	s8 bta3=(s8)dutycycle;
-	OCR2=256-bta3;
+	s8 cycle=(s8)dutycycle;
+	OCR2=256-cycle;
 }
 void PWM_vidStopPWM(void)
 {
