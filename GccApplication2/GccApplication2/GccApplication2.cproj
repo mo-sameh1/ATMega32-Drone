@@ -144,6 +144,12 @@
     <Compile Include="EXTI_prog.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="FLIGHT_INIT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FLIGHT_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="GIE_config.h">
       <SubType>compile</SubType>
     </Compile>
@@ -174,10 +180,10 @@
     <Compile Include="STD_types.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="uart.c">
+    <Compile Include="USART.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="uart.h">
+    <Compile Include="USART_H.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
