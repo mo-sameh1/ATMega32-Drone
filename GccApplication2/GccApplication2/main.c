@@ -20,7 +20,7 @@ int main(void)
 	DIO_voidSetPinValue(DIO_U8_PORTD, DIO_U8_PIN3, DIO_U8_HIGH);
     PWM_vidInit();
 	USART_Init(9600);
-	u8 curr = 2;
+	f32 curr = 2;
 	u8 change_freq = 0.55;
 	PWM_vidSetDutyNFreqCH0(curr);
 	PWM_vidSetDutyNFreqCH1A(curr);
@@ -30,25 +30,25 @@ int main(void)
     {
 		
 		u8 rec=USART_RxChar();
-		if (rec=='U' && curr >= 14 || rec =='D' && curr <= 3){
-			USART_TxChar('Out of limit.');
+		if ((rec=='U' && curr >= 14) ||( rec =='D' && curr <= 3)){
+			continue;
 		}
 		else if(rec=='U'){
-			curr += change_freq
+			curr += change_freq;
 			PWM_vidSetDutyNFreqCH0(curr);
 			PWM_vidSetDutyNFreqCH1A(curr);
 			PWM_vidSetDutyNFreqCH1B(curr);
 			PWM_vidSetDutyNFreqCH2(curr);
-			USART_TxChar('I went up :)');
+			
 			_delay_ms(1000);
 		}
 		else if (rec =='D'){
-			curr -= change_freq
+			curr -= change_freq;
 			PWM_vidSetDutyNFreqCH0(curr);
 			PWM_vidSetDutyNFreqCH1A(curr);
 			PWM_vidSetDutyNFreqCH1B(curr);
 			PWM_vidSetDutyNFreqCH2(curr);
-			USART_TxChar('I went down :(');
+			
 			_delay_ms(1000);
 		}
 						
