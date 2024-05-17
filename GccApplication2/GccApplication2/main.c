@@ -30,7 +30,10 @@ int main(void)
     {
 		
 		u8 rec=USART_RxChar();
-		if(rec=='U' && curr < 14){
+		if (rec=='U' && curr >= 14 || rec =='D' && curr <= 3){
+			USART_TxChar('Out of limit.');
+		}
+		else if(rec=='U'){
 			curr += change_freq
 			PWM_vidSetDutyNFreqCH0(curr);
 			PWM_vidSetDutyNFreqCH1A(curr);
@@ -39,7 +42,7 @@ int main(void)
 			USART_TxChar('I went up :)');
 			_delay_ms(1000);
 		}
-		else if (rec =='D' && curr > 3){
+		else if (rec =='D'){
 			curr -= change_freq
 			PWM_vidSetDutyNFreqCH0(curr);
 			PWM_vidSetDutyNFreqCH1A(curr);
