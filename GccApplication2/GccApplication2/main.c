@@ -24,6 +24,10 @@ int main(void)
     {
 		
 		u8 rec=USART_RxChar();
+		if(rec=='A'){
+			PWM_vidSetDutyNFreqCH0(50);
+			USART_TxChar('A');
+		}
 		
 						
     }

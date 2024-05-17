@@ -6,11 +6,13 @@ DIO_prog.c
 
 EXTI_prog.c
 
+FLIGHT_PROG.c
+
 GIE_prog.c
 
 main.c
 
 PWM_prog.c
 
-uart.c
+USART.c
 

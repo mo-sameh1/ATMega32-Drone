@@ -1,4 +1,4 @@
-main.d main.o: .././main.c \
+USART.d USART.o: .././USART.c .././USART_H.h \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -9,12 +9,9 @@ main.d main.o: .././main.c \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
- d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
- d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- .././STD_types.h .././BIT_math.h .././PWM_int.h .././DIO_int.h \
- .././USART_H.h
+ d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
+
+.././USART_H.h:
 
 d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -37,19 +34,3 @@ d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h:
 d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
 
 d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
-
-d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
-
-d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
-
-d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
-
-.././STD_types.h:
-
-.././BIT_math.h:
-
-.././PWM_int.h:
-
-.././DIO_int.h:
-
-.././USART_H.h:
