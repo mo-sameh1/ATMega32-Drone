@@ -21,7 +21,7 @@ int main(void)
     PWM_vidInit();
 	USART_Init(9600);
 	f32 curr = 2;
-	u8 change_freq = 0.55;
+	f32 change_freq = 0.55;
 	PWM_vidSetDutyNFreqCH0(curr);
 	PWM_vidSetDutyNFreqCH1A(curr);
 	PWM_vidSetDutyNFreqCH1B(curr);
@@ -35,23 +35,22 @@ int main(void)
 		}
 		else if(rec=='U'){
 			curr += change_freq;
+			USART_TxChar('R');
 			PWM_vidSetDutyNFreqCH0(curr);
 			PWM_vidSetDutyNFreqCH1A(curr);
 			PWM_vidSetDutyNFreqCH1B(curr);
-			PWM_vidSetDutyNFreqCH2(curr);
-			
+			PWM_vidSetDutyNFreqCH2(curr);			
 			_delay_ms(1000);
 		}
 		else if (rec =='D'){
 			curr -= change_freq;
+			USART_TxChar('R');
 			PWM_vidSetDutyNFreqCH0(curr);
 			PWM_vidSetDutyNFreqCH1A(curr);
 			PWM_vidSetDutyNFreqCH1B(curr);
 			PWM_vidSetDutyNFreqCH2(curr);
-			
 			_delay_ms(1000);
 		}
-						
     }
 }
 
